@@ -6,7 +6,7 @@ An electric bass guitar amplifier head and cabinet capable of pushing 20 watts t
 - Pre-amp bypass for external amplifiers
 - Two speaker drivers for superior frequency response
 ## Motivation
-After building my bass guitar, I was dissatisfied with the experience of simulating an amp digitally and interacting with the sound through standard headphones, as it lacked the feel that makes bass playing enjoyable. Learning about amplifiers and filters in my Circuits II class allowed me to consider designing my amplifier and apply my theoretical knowledge instead of purchasing a prebuilt one. 
+After building my bass guitar, I was dissatisfied with the experience of simulating an amp digitally and interacting with the sound through standard headphones, as it lacked the feel that makes bass playing enjoyable. Learning about amplifiers and filters in my Circuits II class allowed me to consider designing my amplifier and apply my theoretical knowledge and create something unique instead of purchasing a prebuilt one. 
 ## Pre-amp
 A buffered instrument signal is run through active amp stages, first for a gain of about 11X, and then through a three-band equalization stage. Pictured below are the changes to the simulated signal voltage after each stage.
 
@@ -19,7 +19,7 @@ The three-band equalizer follows a Bandaxall design to shape the bass, mids, and
 <img width="1912" height="856" alt="Image" src="https://github.com/user-attachments/assets/cd48cdc3-2906-4c60-abf2-92cdb265bc73" />
 
 ## Power-amp
-The power amp section is controlled by the TPA3116D2DADR class D amplifier. To create an amp that pushes around 20 watts, suitable for solo playing and light band use, I decided to use an input of 12V.
+The power amp section is controlled by the TPA3116D2DADR class D amplifier. To create an amp that pushes around 20 watts, suitable for solo playing and light band use, I decided to use an input of 12V on an 8-ohm load.
 ## Build Process
 description of the highs and lows of the planning, development, and construction stages  
 ## Final Thoughts
