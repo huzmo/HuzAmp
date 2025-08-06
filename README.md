@@ -1,6 +1,6 @@
 # HuzAmp 
 An electric bass guitar amplifier head and cabinet capable of pushing 20 watts through 8-ohm speakers.
-##Design Features
+## Design Features
 - Three Band EQ
 - Class D power amplifier for over 90% efficiency
 - Pre-amp bypass for external amplifiers
