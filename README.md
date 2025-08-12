@@ -1,12 +1,17 @@
 # HuzAmp 
 An electric bass guitar amplifier head and cabinet capable of pushing 20 watts through 8-ohm speakers.
+<p float="left">
+  <img src="https://github.com/user-attachments/assets/be3368cf-199f-4710-bf0f-667f3fbe92b9" width="500" />
+  <img src= "https://github.com/user-attachments/assets/21441805-2548-4da6-9d0c-d8c29421890c"  width="500" /> 
+</p>
+
 ## Design Features
 - Three Band EQ
 - Class D power amplifier for over 90% efficiency
 - Pre-amp bypass for external amplifiers
 - Two speaker drivers for superior frequency response
 ## Motivation
-After building my bass guitar, I was dissatisfied with the experience of simulating an amp digitally and interacting with the sound through standard headphones, as it lacked the feel that makes bass playing enjoyable. Learning about amplifiers and filters in my Circuits II class allowed me to consider designing my amplifier and apply my theoretical knowledge and create something unique instead of purchasing a prebuilt one. 
+After building my bass guitar, I was dissatisfied with the experience of simulating an amp digitally and interacting with the sound through standard headphones, as it lacked the feel that makes bass playing enjoyable. Learning about operational amplifiers and filters in my Circuits II class allowed me to consider designing my amplifier, apply my theoretical knowledge, and create something unique. 
 ## Pre-amp
 A buffered instrument signal is run through active amp stages, first for a gain of about 11X, and then through a three-band equalization stage. Pictured below are the changes to the simulated signal voltage after each stage.
 
@@ -20,7 +25,5 @@ The three-band equalizer follows a Bandaxall design to shape the bass, mids, and
 
 ## Power-amp
 The power amp section is controlled by the TPA3116D2DADR class D amplifier. To create an amp that pushes around 20 watts, suitable for solo playing and light band use, I decided to use an input of 12V on an 8-ohm load.
-## Build Process
-description of the highs and lows of the planning, development, and construction stages  
-## Final Thoughts
-Closing remarks, including learned lessons and changes for the next iterations
+
+
