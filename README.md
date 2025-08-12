@@ -1,8 +1,8 @@
 # HuzAmp 
 An electric bass guitar amplifier head capable of pushing 20 watts through 8-ohm speakers.
 <p float="left">
-  <img src="https://github.com/user-attachments/assets/be3368cf-199f-4710-bf0f-667f3fbe92b9" width="500" />
-  <img src= "https://github.com/user-attachments/assets/21441805-2548-4da6-9d0c-d8c29421890c"  width="500" /> 
+  <img src="https://github.com/user-attachments/assets/be3368cf-199f-4710-bf0f-667f3fbe92b9" width="450" />
+  <img src= "https://github.com/user-attachments/assets/21441805-2548-4da6-9d0c-d8c29421890c"  width="450" /> 
 </p>
 
 ## Design Features
