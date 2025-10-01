@@ -5,6 +5,9 @@ An electric bass guitar amplifier head capable of pushing 20 watts through 8-ohm
   <img src= "https://github.com/user-attachments/assets/21441805-2548-4da6-9d0c-d8c29421890c"  width="450" /> 
 </p>
 
+## Demo
+https://youtu.be/mhflcKGxFuk
+
 ## Design Features
 - Three Band EQ
 - Class D power amplifier for over 90% efficiency
