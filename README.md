@@ -6,7 +6,7 @@ An electric bass guitar amplifier head capable of pushing 20 watts through 8-ohm
 </p>
 
 ## Demo
-https://youtu.be/mhflcKGxFuk
+[Watch on YouTube](https://youtu.be/mhflcKGxFuk)
 
 ## Design Features
 - Three Band EQ
@@ -15,18 +15,43 @@ https://youtu.be/mhflcKGxFuk
 - Two speaker drivers for superior frequency response
 ## Motivation
 After building my bass guitar, I was dissatisfied with the experience of simulating an amp digitally and interacting with the sound through standard headphones, as it lacked the feel that makes bass playing enjoyable. Learning about operational amplifiers and filters in my Circuits II class allowed me to consider designing my amplifier, apply my theoretical knowledge, and create something unique. 
+
+## System Overview
+<img width="1320" height="559" alt="Image" src="https://github.com/user-attachments/assets/432124b3-438c-4556-9b41-ff4e68bf42ff" />
+
+A high-level overview of the signal path in this design.
+
 ## Pre-amp
-A buffered instrument signal is run through active amp stages, first for a gain of about 11X, and then through a three-band equalization stage. Pictured below are the changes to the simulated signal voltage after each stage.
+A buffered instrument signal is run through active amp stages, first for a gain of about 11X, and then through a three-band equalization stage.
 
 <img width="1913" height="854" alt="Image" src="https://github.com/user-attachments/assets/a1a5a7bc-988e-4cd0-ad20-54e0c082e74e" />
 Notably, the equalization stage inverts and slightly reduces the amplitude of the wave. This is not an issue, as the audio application is not affected by a change in phase, and the loss of gain still allows us to fall inside the input voltage peak-to-peak requirement of the power amplifier.  
 
 
-The three-band equalizer follows a Bandaxall design to shape the bass, mids, and treble. Due to the nature of Banaxall equilizers, manipulating a certain frequency band alters the shape of the other bands, leading to a more natural sound. Below is the Bode plot of the frequency range of the electric guitar when the potentiometer controlling the bass is at its maximum position, while the other two parameters are at their minimum.
+The three-band equalizer follows a Bandaxall design to shape the bass, mids, and treble. Due to the nature of Bandaxall equilizers, manipulating a certain frequency band alters the shape of the other bands, leading to a more natural sound. Below is the Bode plot of the frequency range of the electric guitar when the potentiometer controlling the bass is at its maximum position, while the other two parameters are at their minimum.
 
 <img width="1912" height="856" alt="Image" src="https://github.com/user-attachments/assets/cd48cdc3-2906-4c60-abf2-92cdb265bc73" />
 
-## Power-amp
-The power amp section is controlled by the TPA3116D2DADR class D amplifier. To create an amp that pushes around 20 watts, suitable for solo playing and light band use, I decided to use an input of 12V on an 8-ohm load.
+## Component Selection
+### Op-Amps
+The Texas Instruments OPA1641 was the op-amp of choice for the preamp and EQ stages due to its:
+- **Low total harmonic distortion (THD)** of 0.00005%, ensuring transparency and minimal coloration of the bass tone  
+- **Low input noise** (5.1 nV/√Hz), which helps maintain signal integrity from passive bass pickups  
+- **Rail-to-rail output capability** and wide supply range (±2.25V to ±18V), offering headroom for dynamic signals  
+- **Unity-gain stability**, making it ideal for both buffering and gain stages in the preamp chain
+  
+### Power Amp
+The Texas Instruments TPA3116D2DADR Class-D amplifier module drives the speaker load efficiently, offering:
+- **>90% efficiency**, minimizing heat and power waste  
+- **0.1% THD at 1W** and high dynamic range  
+- **Integrated protection features** including short-circuit, thermal, and undervoltage protection
+
+These core components were selected with audio fidelity in mind while keeping conscious of form factor, cost, and thermals. 
+
+## Hardware Design
+### Component Placement
+Component layout and placement were crucial elements in designing a quality product that is capable of producing a clean sound. 
+
+## Reflection
 
 
