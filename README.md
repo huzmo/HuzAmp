@@ -49,9 +49,24 @@ The Texas Instruments TPA3116D2DADR Class-D amplifier module drives the speaker 
 These core components were selected with audio fidelity in mind while keeping conscious of form factor, cost, and thermals. 
 
 ## Hardware Design
-### Component Placement
-Component layout and placement were crucial elements in designing a quality product that is capable of producing a clean sound. 
+
+### Layout
+Component layout and placement were crucial elements in designing a quality product that is capable of producing a clean sound. I decided to use a 2-layer board in this design to minimize cost and complexity, but that meant that every decision was crucial in ensuring the system stays as noise-free as possible. By keeping analog circuitry physically separated from the power supply section, I was able to protect my sensitive signals from the noise of the switching regulators. 
+
+### Routing and Signal Integrity
+The analog signals, being sensitive, must be kept as isolated from noise and interference as possible. To prevent noise from the power supply section of the board, I employed the star ground method, which effectively isolates the analog and power grounds by connecting them at a single point using a ferrite bead. 
+
+By routing horizontally on the top plane and vertically on the bottom plane, I minimized capacitive crosstalk by minimizing the coupled area between traces on adjacent layers. 
+
+Alongside keeping short return paths, the components are laid out to keep similar signals together, minimizing interference. Via stitching is used liberally to keep return paths short and provide thermal relief between top and bottom ground pours, while also acting as a shield against electromagnetic interference.
+
+### Thermal Considerations
+The TPA3116D2DADR power amp IC sits on a dedicated copper pad with multiple thermal vias to the bottom layer, acting as a heat sink. Alongside the ground planes, the IC is thermally coupled to a 17 x 17 x 11.50mm aluminum heatsink with a thermal resistance of 23.91 °C/W (natural convection), providing adequate dissipation for a ~2 W thermal output at 20 W load, which provides additional heat dissipation to provide relief to the board. Due to the high efficiency of the Class-D topology, the heatsink operates at near room temperature even under a full 20W load, ensuring stable performance and long-term reliability without the need for active cooling. This passive design approach keeps the amplifier compact and silent while maintaining thermal headroom for extended playing sessions.
 
 ## Reflection
+### Future Improvements
+In terms of design, I would add a switch to power the power amp IC down if the user would only like to use the pre-amp. Another addition would be adding a lowpass filter with a corner frequency slightly above the maximum for our target bandwidth, which would ensure that any unwanted frequencies are handled before entering any tone-shaping stages.
 
+### Closing Remarks
+Through this project, I furthered my understanding of analog PCB design, power delivery networks, and signal integrity. From selecting the components to routing the traces, I was reminded of the importance of even the finest detail and how a small oversight could potentially alter the system's performance. The success of the first prototype validated the design workflow and the techniques employed to maintain system integrity. This project merged my interests in guitars and hardware design, allowing me to apply theory from my studies to a practical and personally meaningful product. 
 
