@@ -35,6 +35,7 @@ The three-band equalizer follows a Bandaxall design to shape the bass, mids, and
 ### Power Amp
 <img width="1722" height="760" alt="Image" src="https://github.com/user-attachments/assets/6106d3f6-b894-403e-bce3-62d3dcba6744" />
 The power amp circuit pays close attention to signal integrity, power stability, and EMI suppression. The chip is configured to receive a single-ended mono input and output a differential output. From the manufacturer's datasheet, the supplied power is capable of producing 20 W on a 4-ohm load.
+<br>
 
 <img width="334" height="217" alt="Image" src="https://github.com/user-attachments/assets/5407c7dd-0807-4725-9c75-e5d954e5d3a6" />
 
@@ -44,17 +45,18 @@ The output of the power amp is passed through an LC low-pass filter and an EMI s
 
 ### Power Delivery Network
 <img width="1573" height="747" alt="Image" src="https://github.com/user-attachments/assets/fee8fa47-4ec4-431e-9dd2-83af3e07b2ef" />
-
+<br>
 12V is supplied to the device from an external DC power supply to ensure stable delivery without the need for a built-in supply using mains voltage. The 12V supply is fused at 3A to protect the circuit from a potentially damaging current surge. To provide a stable 5V for the analog supply, a step-down buck converter is employed, smoothed with an LC output network. The stable 5V is then passed into an isolated +/- 5V converter to provide a dual supply to the op-amps.
+
 
 ## Component Selection
 ### Op-Amps
-The Texas Instruments OPA1641 was the op-amp of choice for the preamp and EQ stages due to its:
+The Texas Instruments OPA1641 was selected, offering:
 - Low total harmonic distortion (THD) of 0.00005%, ensuring transparency and minimal coloration of the bass tone  
 - Low input noise (5.1 nV/√Hz), which helps maintain signal integrity from passive bass pickups  
 - Rail-to-rail output capability and wide supply range (±2.25V to ±18V), offering headroom for dynamic signals  
 - Unity-gain stability, making it ideal for both buffering and gain stages in the preamp chain
-  
+
 ### Power Amp
 The Texas Instruments TPA3116D2DADR Class-D amplifier module drives the speaker load efficiently, offering:
 - >90% efficiency, minimizing heat and power waste  
@@ -62,6 +64,7 @@ The Texas Instruments TPA3116D2DADR Class-D amplifier module drives the speaker 
 - Integrated self-protection circuits, including short-circuit, thermal, and undervoltage protection
 
 These core components were selected with audio fidelity in mind while keeping conscious of form factor, cost, and thermals. 
+
 
 ## Hardware Design
 
