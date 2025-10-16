@@ -35,11 +35,12 @@ The three-band equalizer follows a Bandaxall design to shape the bass, mids, and
 ### Power Amp
 <img width="1722" height="760" alt="Image" src="https://github.com/user-attachments/assets/6106d3f6-b894-403e-bce3-62d3dcba6744" />
 The power amp circuit pays close attention to signal integrity, power stability, and EMI suppression. The chip is configured to receive a single-ended mono input and output a differential output. From the manufacturer's datasheet, the supplied power is capable of producing 20 W on a 4-ohm load.
+
 <img width="334" height="217" alt="Image" src="https://github.com/user-attachments/assets/5407c7dd-0807-4725-9c75-e5d954e5d3a6" />
 
 Keeping power delivery stable is imperative in this application. Decoupling capacitors are used where appropriate, through a combination of smaller capacitors to suppress higher-frequency noise and bulk decoupling to prevent larger voltage variations. Capacitors are placed in proximity to the VCC pins to minimize inductance in the power delivery path.
 
-The output of the power amp is passed through an LC low-pass filter and an EMI snubber network. The role of the LC filter stage is to allow the band of usable audio only, and suppress any unwanted high-frequency noise from being outputted by the load. The EMI snubber stage is used to dissipate energy produced by high-frequency switching and stabilize the output filter when driving the reactive load. These stages are crucial in minimizing noise from being outputted by the speaker, potentially ruining the listening experience.
+The output of the power amp is passed through an LC low-pass filter and an EMI snubber network. The role of the LC filter stage is to allow the band of usable audio only, and suppress any unwanted high-frequency noise from being outputted by the load. The EMI snubber stage is used to dissipate energy produced by high-frequency switching and stabilize the output filter when driving the reactive load. These stages are crucial in minimizing noise that could potentially ruin the listening experience from being outputted by the speaker.
 
 ### Power Delivery Network
 <img width="1573" height="747" alt="Image" src="https://github.com/user-attachments/assets/fee8fa47-4ec4-431e-9dd2-83af3e07b2ef" />
