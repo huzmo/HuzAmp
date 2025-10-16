@@ -52,16 +52,16 @@ The output of the power amp is passed through an LC low-pass filter and an EMI s
 ## Component Selection
 ### Op-Amps
 The Texas Instruments OPA1641 was selected, offering:
-- Low total harmonic distortion (THD) of 0.00005%, ensuring transparency and minimal coloration of the bass tone  
-- Low input noise (5.1 nV/√Hz), which helps maintain signal integrity from passive bass pickups  
-- Rail-to-rail output capability and wide supply range (±2.25V to ±18V), offering headroom for dynamic signals  
-- Unity-gain stability, making it ideal for both buffering and gain stages in the preamp chain
+- Low total harmonic distortion (THD) of 0.00005%, ensuring a clean signal output.  
+- Low input noise (5.1 nV/√Hz), which helps maintain signal integrity from passive bass pickups.  
+- Rail-to-rail output capability and wide supply range (±2.25V to ±18V), offering headroom for dynamic signals.  
+- Unity-gain stability, making it ideal for both buffering and gain stages in the preamp chain.
 
 ### Power Amp
 The Texas Instruments TPA3116D2DADR Class-D amplifier module drives the speaker load efficiently, offering:
-- >90% efficiency, minimizing heat and power waste  
-- Simple mono configuration
-- Integrated self-protection circuits, including short-circuit, thermal, and undervoltage protection
+- >90% efficiency, minimizing heat and power waste.  
+- Simple mono configuration.
+- Integrated self-protection circuits, including short-circuit, thermal, and undervoltage protection.
 
 These core components were selected with audio fidelity in mind while keeping conscious of form factor, cost, and thermals. 
 
