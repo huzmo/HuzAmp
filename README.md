@@ -59,7 +59,7 @@ The Texas Instruments OPA1641 was selected, offering:
 
 ### Power Amp
 The Texas Instruments TPA3116D2DADR Class-D amplifier module drives the speaker load efficiently, offering:
-- >90% efficiency, minimizing heat and power waste.  
+- Over 90% efficiency, minimizing heat and power waste.  
 - Simple mono configuration.
 - Integrated self-protection circuits, including short-circuit, thermal, and undervoltage protection.
 
